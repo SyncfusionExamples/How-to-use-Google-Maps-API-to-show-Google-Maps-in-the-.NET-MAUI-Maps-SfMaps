@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:map="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps"
+             x:Class="GoogleMap.MainPage">
+
+    <ContentPage.Content>
+        <map:SfMaps VerticalOptions="Center"
+                    HorizontalOptions="Center">
+            <map:SfMaps.Layer>
+                <map:MapTileLayer x:Name="layer">
+                    <map:MapTileLayer.MarkerTemplate>
+                        <DataTemplate>
+                            <StackLayout HorizontalOptions="Start"
+                                         VerticalOptions="Center">
+                                <Image Source="pin.png"
+                                       HeightRequest="20"
+                                       WidthRequest="20" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </map:MapTileLayer.MarkerTemplate>
+                    <map:MapTileLayer.Markers>
+                        <map:MapMarkerCollection>
+                            <map:MapMarker Latitude="37.785834"
+                                           Longitude="-122.406417" />
+                            <map:MapMarker Latitude="38.8833"
+                                           Longitude="-77.0167" />
+                            <map:MapMarker Latitude="-15.7833"
+                                           Longitude="-47.8667" />
+                            <map:MapMarker Latitude="21.0000"
+                                           Longitude="78.0000" />
+                            <map:MapMarker Latitude="35.0000"
+                                           Longitude="103.0000" />
+                            <map:MapMarker Latitude="-4.0383"
+                                           Longitude="21.7586" />
+                        </map:MapMarkerCollection>
+                    </map:MapTileLayer.Markers>
+                </map:MapTileLayer>
+            </map:SfMaps.Layer>
+        </map:SfMaps>
+    </ContentPage.Content>
+
+</ContentPage>
